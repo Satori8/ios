@@ -16,6 +16,10 @@
 		1F2BA2251B0BE943006270E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F2BA2241B0BE943006270E1 /* Images.xcassets */; };
 		1F2BA2281B0BE943006270E1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2BA2261B0BE943006270E1 /* LaunchScreen.xib */; };
 		1F2BA2341B0BE944006270E1 /* ClassicSnakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2BA2331B0BE944006270E1 /* ClassicSnakeTests.m */; };
+		1FDA97D01B0CC5B3003E40DD /* CSSnake.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA97CF1B0CC5B3003E40DD /* CSSnake.m */; };
+		1FDA97D31B0CC5D2003E40DD /* CSSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA97D21B0CC5D2003E40DD /* CSSegment.m */; };
+		1FDA97D61B0CC5E5003E40DD /* CSApple.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA97D51B0CC5E5003E40DD /* CSApple.m */; };
+		1FDA97D91B0CC602003E40DD /* CSStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA97D81B0CC602003E40DD /* CSStage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,14 @@
 		1F2BA22D1B0BE944006270E1 /* ClassicSnakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassicSnakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F2BA2321B0BE944006270E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F2BA2331B0BE944006270E1 /* ClassicSnakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassicSnakeTests.m; sourceTree = "<group>"; };
+		1FDA97CE1B0CC5B3003E40DD /* CSSnake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSnake.h; sourceTree = "<group>"; };
+		1FDA97CF1B0CC5B3003E40DD /* CSSnake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSnake.m; sourceTree = "<group>"; };
+		1FDA97D11B0CC5D2003E40DD /* CSSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSegment.h; sourceTree = "<group>"; };
+		1FDA97D21B0CC5D2003E40DD /* CSSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSegment.m; sourceTree = "<group>"; };
+		1FDA97D41B0CC5E5003E40DD /* CSApple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSApple.h; sourceTree = "<group>"; };
+		1FDA97D51B0CC5E5003E40DD /* CSApple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSApple.m; sourceTree = "<group>"; };
+		1FDA97D71B0CC602003E40DD /* CSStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSStage.h; sourceTree = "<group>"; };
+		1FDA97D81B0CC602003E40DD /* CSStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSStage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				1F2BA2111B0BE943006270E1 /* ClassicSnake */,
-				1F2BA2301B0BE944006270E1 /* ClassicSnakeTests */,
 				1F2BA2101B0BE943006270E1 /* Products */,
+				1F2BA2301B0BE944006270E1 /* ClassicSnakeTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,16 +98,10 @@
 		1F2BA2111B0BE943006270E1 /* ClassicSnake */ = {
 			isa = PBXGroup;
 			children = (
-				1F2BA2161B0BE943006270E1 /* AppDelegate.h */,
-				1F2BA2171B0BE943006270E1 /* AppDelegate.m */,
-				1F2BA2191B0BE943006270E1 /* GameScene.h */,
-				1F2BA21A1B0BE943006270E1 /* GameScene.m */,
-				1F2BA21C1B0BE943006270E1 /* GameScene.sks */,
-				1F2BA21E1B0BE943006270E1 /* GameViewController.h */,
-				1F2BA21F1B0BE943006270E1 /* GameViewController.m */,
-				1F2BA2211B0BE943006270E1 /* Main.storyboard */,
+				1FDA97CB1B0CC508003E40DD /* Model */,
+				1FDA97CC1B0CC51D003E40DD /* Controller */,
+				1FDA97CD1B0CC53A003E40DD /* View */,
 				1F2BA2241B0BE943006270E1 /* Images.xcassets */,
-				1F2BA2261B0BE943006270E1 /* LaunchScreen.xib */,
 				1F2BA2121B0BE943006270E1 /* Supporting Files */,
 			);
 			path = ClassicSnake;
@@ -104,6 +110,8 @@
 		1F2BA2121B0BE943006270E1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1F2BA2161B0BE943006270E1 /* AppDelegate.h */,
+				1F2BA2171B0BE943006270E1 /* AppDelegate.m */,
 				1F2BA2131B0BE943006270E1 /* Info.plist */,
 				1F2BA2141B0BE943006270E1 /* main.m */,
 			);
@@ -125,6 +133,42 @@
 				1F2BA2321B0BE944006270E1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FDA97CB1B0CC508003E40DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1FDA97CE1B0CC5B3003E40DD /* CSSnake.h */,
+				1FDA97CF1B0CC5B3003E40DD /* CSSnake.m */,
+				1FDA97D11B0CC5D2003E40DD /* CSSegment.h */,
+				1FDA97D21B0CC5D2003E40DD /* CSSegment.m */,
+				1FDA97D41B0CC5E5003E40DD /* CSApple.h */,
+				1FDA97D51B0CC5E5003E40DD /* CSApple.m */,
+				1FDA97D71B0CC602003E40DD /* CSStage.h */,
+				1FDA97D81B0CC602003E40DD /* CSStage.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1FDA97CC1B0CC51D003E40DD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F2BA21E1B0BE943006270E1 /* GameViewController.h */,
+				1F2BA21F1B0BE943006270E1 /* GameViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1FDA97CD1B0CC53A003E40DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F2BA2191B0BE943006270E1 /* GameScene.h */,
+				1F2BA21A1B0BE943006270E1 /* GameScene.m */,
+				1F2BA21C1B0BE943006270E1 /* GameScene.sks */,
+				1F2BA2211B0BE943006270E1 /* Main.storyboard */,
+				1F2BA2261B0BE943006270E1 /* LaunchScreen.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,9 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FDA97D61B0CC5E5003E40DD /* CSApple.m in Sources */,
+				1FDA97D01B0CC5B3003E40DD /* CSSnake.m in Sources */,
 				1F2BA2201B0BE943006270E1 /* GameViewController.m in Sources */,
 				1F2BA2181B0BE943006270E1 /* AppDelegate.m in Sources */,
+				1FDA97D31B0CC5D2003E40DD /* CSSegment.m in Sources */,
 				1F2BA21B1B0BE943006270E1 /* GameScene.m in Sources */,
+				1FDA97D91B0CC602003E40DD /* CSStage.m in Sources */,
 				1F2BA2151B0BE943006270E1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +470,7 @@
 				1F2BA2391B0BE944006270E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F2BA23A1B0BE944006270E1 /* Build configuration list for PBXNativeTarget "ClassicSnakeTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +479,7 @@
 				1F2BA23C1B0BE944006270E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
